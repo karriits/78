@@ -1,0 +1,61 @@
+
+/* ===== MOBILE FIRST (по умолчанию) ===== */
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+main{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Все div с цветами (карточки) */
+main > div{
+  border: 2px solid #333;
+  padding: 10px;
+  display: block;          /* мобильный: в колонку */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Картинки */
+main > div img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Подпись */
+.label{
+  font-weight: bold;
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+/* ===== TABLET (>=772px) ===== */
+@media (min-width: 772px){
+
+  main > div{
+    width: 45%;
+    display: inline-block;     /* чтобы встали рядом */
+    vertical-align: top;
+    margin: 1%;
+  }
+
+  main > div img{
+    max-height: 30vh;          /* не больше 30% высоты экрана */
+    width: 100%;
+    object-fit: cover;         /* чтобы красиво обрезалось */
+  }
+}
+/* ===== LARGE SCREEN (>=998px) ===== */
+@media (min-width: 998px){
+
+  main > div{
+    width: 30%;     /* 3 в ряд */
+  }
+}
+ 
+
